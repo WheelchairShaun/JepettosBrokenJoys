@@ -34,20 +34,32 @@
     <Reference Include="HearthstoneDeckTracker">
       <HintPath>..\..\..\Users\shaun\AppData\Local\HearthstoneDeckTracker\app-1.25.1\HearthstoneDeckTracker.exe</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrokenJoys.cs" />
     <Compile Include="JepettoPlugin.cs" />
+    <Compile Include="Overlay\CopiedMinionsView.xaml.cs">
+      <DependentUpon>CopiedMinionsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Overlay\CopiedMinionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
